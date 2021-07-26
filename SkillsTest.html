@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"> <!--not sure why this was not included. to ask: is this embedded in smth else here?-->
+  <title>Skills Test Assessment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <style>
+    .fa-check-circle {
+      color: green;
+    }
+
+    .fa-times-circle {
+      color: red;
+    }
+  </style>
+
+  <script>
+    function validate() {
+      let n = document.getElementById("name").value;
+      let c = document.getElementById("contactnumber").value;
+      let out = document.querySelector("#Output");
+
+      var pM = "You have successfully submitted your contact details.";
+      var fM = "Error: Please check all the details before submitting.";
+
+      var nI = document.querySelector("#nameIcon");
+      var cI = document.querySelector("#conumIcon");
+
+      if (n != "" && n != " " && c != "" && c != " ") {
+        out.textContent = pM;
+        nI.className = "fas fa-check-circle";
+        cI.className = "fas fa-check-circle";
+      } else if ((n == "" || n == " ") && (c != "" && c != " ")) {
+        out.textContent = fM;
+        nI.className = "fas fa-times-circle";
+        cI.className = "fas fa-check-circle";
+      } else if ((n != "" && n != " ") && (c == "" || c == " ")) {
+        out.textContent = fM;
+        nI.className = "fas fa-check-circle";
+        cI.className = "fas fa-times-circle";
+      } else {
+        out.textContent = fM;
+        nI.className = "fas fa-times-circle";
+        cI.className = "fas fa-times-circle";
+      }
+    }
+
+    function changeTheme(choice) {
+      let theme = choice.value;
+      let space = document.getElementById("form-side");
+
+      var lightTheme = "panel bg-light";
+      var darkTheme = "panel bg-dark text-white";
+
+      if (theme == "Light") {
+        space.classList = "panel bg-light";
+      } else {
+        space.classList = "panel bg-dark text-white";
+      }
+    }
+  </script>   
+</head>
+<body>
+  <main class="m-3 p-3 d-flex justify-content-center align-items-center h-100">
+    <div class="container-fluid ">
+      <div class="row h-100">
+        <!-- THE LEFT SECTION -->
+        <div class="col-12 col-sm-12 col-md-6">
+          <div class="panel bg-light" id="form-side">
+            <div class="panel-body p-3">
+              <form action="#">
+                <h3 style="text-align:center;" for="name">
+                    Contact Details
+                 </h3>
+                <!-- Name -->
+                <div class="form-group">
+                  <label class="control-label" for="name">
+                    Name: <i class="" id="nameIcon"></i>
+                  </label>
+                  <input  class="form-control" type="text" id="name" name="name" />
+                </div>
+                <!-- Contact Number -->
+                <div class="form-group">
+                  <label class="control-label" for="contactnumber">
+                    Contact Number: <i class="" id="conumIcon"></i>
+                  </label>
+                  <input class="form-control" type="text" id="contactnumber" name="contactnumber"/>
+                </div>
+                <!-- Choose Theme -->
+                <div class="form-group">
+                  <label class="control-label mr-3">
+                    Choose Theme:
+                  </label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="modeOptions" id="light" value="Light" onchange="changeTheme(this)">
+                    <label class="form-check-label" for="light">Light Mode</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="modeOptions" id="dark" value="Dark" onchange="changeTheme(this)">
+                    <label class="form-check-label" for="dark">Dark Mode</label>
+                  </div>
+                </div>
+                <!-- Submit Button -->
+                  <button  type="button" class="btn btn-success btn-sm" id="html" onclick="validate()">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- THE RIGHT SECTION -->
+        <div class="col-12 col-sm-12 col-md-6 h-100">
+          <div class="panel bg-dark text-white">
+            <div class="panel-body p-3">
+                <p id="Output"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
