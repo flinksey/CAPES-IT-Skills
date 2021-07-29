@@ -13,3 +13,6 @@
   - Checks formatting of the number (09XX XXX XXXX instead of +63 XXX XXX XXXX).
 - **Display**
   - Instead of the screen being divided into to 2 columns, the confirmation/error message will be displayed in the same space as the form.
+
+### Design and Layout Ideas (Figma)
+Access my brainstorming board [here](https://www.figma.com/file/0aUksSOiGVgprNd2GZqrq0/Skills-Test-Experimentation?node-id=0%3A1).
