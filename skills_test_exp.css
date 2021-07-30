@@ -1,0 +1,36 @@
+.rcorners {
+    border-radius: 25px;
+}
+
+.fa-check-circle {
+    color: rgba(93,200,103,1);
+}
+
+.fa-times-circle {
+    color: rgba(213,81,139,1);
+}
+
+.radbg {
+    background: rgb(213,81,139);
+    background: radial-gradient(circle, rgba(213,81,139,1) 0%, rgba(128,176,232,1) 100%);
+}
+
+.darkbg {
+    background: rgb(2,34,56);
+    margin: auto;
+    width: 50%;
+}
+
+.center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+/* Not used in current version of the experimentation file.*/
+.hide {
+    display: none;
+}
