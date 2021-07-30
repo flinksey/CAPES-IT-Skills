@@ -9,7 +9,7 @@ Due to time constraints on my end, I decided to submit the link to my work befor
   - Clicking on either radio button for the Light and Dark themes should enable switching between them.
   - Once the user clicks "Submit": (1) icons should appear to indicate whether there was input or not and (2) there should be a message to indicate either success or an error.
 
-### Bonus Files
+### Files in "Separated" Folder
 These files provide pretty much the same functionality as the SkillsTest.html, the main difference being that the CSS and Javascript blocks are in separate files and are called within the .html file. 
 - SkillsTest - Experimentation.html
 - skills_test_exp.css
