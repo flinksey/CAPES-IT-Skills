@@ -1,7 +1,7 @@
 # UP CAPES IT Committee Skills Test
 
 #### Note to Evaluator
-Due to time constraints on my end, I decided to submit the link to my work before figuring out how to implement my ideas (refer: Figma link) for alternative designs. In order to avoid any confusion on your end as I plan to continue experimenting, I'll start updating the files here (except Figma draft) on August 2, 2021. The details for each file are found below. 
+Due to time constraints on my end, I decided to submit the link to my work before figuring out how to implement my ideas (refer: Figma link) for alternative designs. The details for each file are found below. 
 
 ### SkillsTest.html
 - This file contains the code used to implement the minimum requirements of the skills test.
